@@ -4,13 +4,13 @@ services:
   university-api:
     build: .
     ports:
-      - "3001:3000"
+      - "3002:3000"
     environment:
       - NODE_ENV=production
-      - PORT=3001
+      - PORT=3002
     restart: unless-stopped
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:3001/"]
+      test: ["CMD", "curl", "-f", "http://localhost:3002/"]
       interval: 30s
       timeout: 10s
       retries: 3
